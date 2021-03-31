@@ -5,7 +5,6 @@ import (
 	"os"
 	"os/exec"
 	"regexp"
-	"strings"
 
 	"github.com/proxypoke/i3ipc"
 	"github.com/vbrown608/xdo-go"
@@ -46,8 +45,5 @@ func windowIsVim() bool {
 	if err != nil {
 		return false
 	}
-
-	name := strings.ToLower(window.GetName())
-	r, _ := regexp.Compile(`\bn?v(im)?$`)
-	return r.MatchString(name)
+    return window.GetName() == "Terminal - nvim"
 }
