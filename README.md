@@ -18,24 +18,17 @@ In your .vimrc (vim) or .config/nvim/init.vim (neovim):
 Plug 'termhn/i3-vim-nav'
 	
 " i3 integration
-nnoremap <silent> <c-l> :call Focus('right', 'l')<CR>
-nnoremap <silent> <c-h> :call Focus('left', 'h')<CR>
-nnoremap <silent> <c-k> :call Focus('up', 'k')<CR>
-nnoremap <silent> <c-j> :call Focus('down', 'j')<CR>
+nmap <silent> <C-M-l> <C-l>
+nmap <silent> <C-M-h> <C-h>
+nmap <silent> <C-M-k> <C-k>
+nmap <silent> <C-M-j> <C-j>
+nnoremap <silent> <C-l> :call Focus('right', 'l')<CR>
+nnoremap <silent> <C-h> :call Focus('left', 'h')<CR>
+nnoremap <silent> <C-k> :call Focus('up', 'k')<CR>
+nnoremap <silent> <C-j> :call Focus('down', 'j')<CR>
 ```
-	
-### Using Pathogen
-1. cd ~/.vim/bundle
-2. git clone https://github.com/termhn/i3-vim-nav
-3. add the following to your .vimrc
 
-```vim
-" i3 integration
-nnoremap <silent> <c-l> :call Focus('right', 'l')<CR>
-nnoremap <silent> <c-h> :call Focus('left', 'h')<CR>
-nnoremap <silent> <c-k> :call Focus('up', 'k')<CR>
-nnoremap <silent> <c-j> :call Focus('down', 'j')<CR>
-```
+Assuming that i3 $mod is set to the alt key. 
 	
 ## Binary
 

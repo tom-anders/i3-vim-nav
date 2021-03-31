@@ -20,7 +20,7 @@ func main() {
 	}
 
 	if windowIsVim() {
-		keycmd := exec.Command("xdotool", "key", "--clearmodifiers", "Escape+control+"+dir)
+		keycmd := exec.Command("xdotool", "key", "Escape+control+"+dir)
 		out, _ := keycmd.Output()
 		if len(out) > 0 {
 			fmt.Println(out)
